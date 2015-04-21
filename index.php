@@ -10,3 +10,4 @@
 	</div>
 </body>
 </html>
+<!-- database for video 3 has been created -->
