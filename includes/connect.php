@@ -12,3 +12,4 @@ else {
 $mysqli->close();
 
 ?>
+<!-- video 8 done -->
