@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php  
+  	require_once(__DIR__ . "/controller/login-verify.php");
+  	require_once(__DIR__ . "/view/header.php");
+  	if(authenticateUser()) {
+  	require_once(__DIR__ . "/view/navigation.php");
+  	require_once(__DIR__ . "/controller/create-db.php");
+  	require_once(__DIR__ . "/view/footer.php");
+ 
+
+?>
 	<title>Jordan's To-Do List</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<form method="post" action="<?php echo $path . "controller/create-post.php"; ?>" 
 </head>
 <body>
 	<div class="wrap">
 		<div class="task-list">
 			<ul>
-			  <?php require("includes/connect.php");
+			  <?php 
+			  require("controller/create-db.php");
+			  require("includes/connect.php");
 			  $mysqli = new mysqli('localhost', 'root', 'root', 'todo');
 			  $query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 			  if ($result = $mysqli->query($query)) {
@@ -16,10 +29,10 @@
 			  	if ($numrows>0) {
 			  		while($row = $result->fetch_assoc()){
 			  			$task_id = $row['id'];
-			  			$task_name = $row["task"];
+			  			$task_name = $row['task'];
 			  			
 			  			echo '<li>
-			  			<span>'.$task_name. '</span>
+			  			<span>'.$task_name.'</span>
 			  			<img id="'.$task_id.'" class="delete-button" width="10px" src="images/close.svg"/> 
 			  			</li>';
 			  	  }
@@ -31,7 +44,7 @@
 			</ul>
 	</div>
 	<form class="add-new-task" autocomplete="off">
-		<input type="text" name="new-tasks" placeholder="Add new item..."/>
+		<input type="text" name="new-task" placeholder="Add new item..."/>
 </form>
 </div>
 </body>
