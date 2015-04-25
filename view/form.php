@@ -15,7 +15,7 @@
  <center>
  <h1> The Bloganator </h1>
  <img src="images/form.png" class="term" align: ; width: "10px" height: "9px">
- <link rel="stylesheet" type="text/css" href="css/style.css">
+ <link rel="stylesheet" type="text/css" href="css/reset.css">
  <form method="post" action="<?php echo $path . "controller/create-post.php"; ?>">
  <!-- method is telling to send or recieve info -->
      <div>

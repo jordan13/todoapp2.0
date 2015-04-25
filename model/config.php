@@ -12,12 +12,12 @@
    $host  = "localhost";
    $username = "root";
    $password = "root";
-   $database = "todo";  
+   $database = "blog_db";  
    // right now we are refactoring these variables
    // here in the connection variable we will have acces to the query function, open connection function, and the closed connection function
    // this database object will help us query the database
    if(!isset($_SESSION["connection"])) {
-        $connection = new Database($host, $username, $password, $database);
+        $connection = new Database($host, $username, $password, $database); 
         $_SESSION["connection"] = $connection;
    // we are using our session and we want to access our session variable in our brackets
    // right now our if statement is checking wether or not our variable has been set or not

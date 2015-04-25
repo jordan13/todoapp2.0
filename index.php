@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php  
-  	require_once(__DIR__ . "/controller/login-verify.php");
-  	require_once(__DIR__ . "/view/header.php");
-  	if(authenticateUser()) {
-  	require_once(__DIR__ . "/view/navigation.php");
-  	require_once(__DIR__ . "/controller/create-db.php");
-  	require_once(__DIR__ . "/view/footer.php");
- 
-
-?>
 	<title>Jordan's To-Do List</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<form method="post" action="<?php echo $path . "controller/create-post.php"; ?>" 
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 
 </head>
 <body>
+	
+	<a class="btn btn-primary" href="login.php">Login</a>
+	<div class="text-right small-4 medium-2 columns">
+	<a class="btn btn-primary" href="logout-user.php">Logout</a>
+	</div>
+	<a class="btn btn-primary" href="register.php">Register</a>
+
 	<div class="wrap">
 		<div class="task-list">
 			<ul>
-			  <?php 
-			  require("controller/create-db.php");
-			  require("includes/connect.php");
+			  <?php require("includes/connect.php");
 			  $mysqli = new mysqli('localhost', 'root', 'root', 'todo');
 			  $query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 			  if ($result = $mysqli->query($query)) {

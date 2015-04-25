@@ -7,11 +7,6 @@
 
   <form method="post" action="<?php echo $path . "controller/create-user.php"; ?>
       <div>
-         <label for="email">Email:</label>
-         <input type="text" name="email"/>
-      </div>
-      
-      <div>
          <label for="username">Username: </label>
          <input type="text" name="username" />
       </div>
