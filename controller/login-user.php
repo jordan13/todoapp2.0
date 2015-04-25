@@ -1,3 +1,15 @@
+<<!DOCTYPE html>
+<html>
+<head>
+<form>
+<input type="button" value="TO DO LIST" onclick="window.location.href='http://localhost/todoapp2.0/index.php'" />
+</form>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
 <?php
 	require_once(__DIR__ . "/../model/config.php");
 	// this gives us access to our data base
@@ -6,6 +18,7 @@
 	$password = filter_input (INPUT_POST, "password", FILTER_SANITIZE_STRING);
 
 	$query = $_SESSION["connection"]->query("SELECT salt, password FROM users WHERE username = '$username'");
+
 	// we are selecting our salt and our password from our users table where our username is the username that was sent in via the post
 	if($query->num_rows == 1) {
 		//num rows checks wether or not the rows are equal to 1	
