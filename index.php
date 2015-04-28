@@ -3,14 +3,47 @@
 <head>
 	<title>Jordan's To-Do List</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	 <link rel="stylesheet" type="text/javascript" href="js/bootstrap.min.js">
+   <meta name="viewport" content="width=device-width">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+
+<style>
+div#load_screen{
+	background: #000;
+	opacity: 1;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+div#load_screen > div#loading{
+	color:#FFF;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+</style>
+<script>
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	document.body.removeChild(load_screen);
+});
+</script>
+</head>
+<body>
+<div id="load_screen"><div id="loading">LOADING</div></div>
+<!-- Your normal document content lives here -->
+
 	
-	<a class="btn btn-primary" href="login.php">Login</a>
-	<div class="text-right small-4 medium-2 columns">
-	<a class="btn btn-primary" href="controller/logout-user.php">Logout</a>
-	</div>
-	<a class="btn btn-primary" href="register.php">Register</a>
+	<button class="hello"> <a class="btn btn-primary" href="login.php">Login</a> </button>
+	<div class="text-right small-4 medium-2 columns"> 
+	<button class="hello"> <a class="btn btn-primary" href="controller/logout-user.php">Logout</a> </button>
+	<button class="hello"> <a class="btn btn-primary" href="register.php">Register</a> </button>
 
 	<div class="wrap">
 		<div class="task-list">
@@ -38,7 +71,7 @@
 			</ul>
 	</div>
 	<form class="add-new-task" autocomplete="off">
-		<input type="text" name="new-task" placeholder="Add new item..."/>
+		<p> <input type="text" name="new-task" placeholder="Add new item..."/> </p>
 </form>
 </div>
 </body>
@@ -70,6 +103,7 @@
     	});
     });
  });  
-</script>
 
+</script>
+	
 </html>                                                                               
