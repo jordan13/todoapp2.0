@@ -4,6 +4,7 @@
  ?>
 <!-- This indicates that this form is to register -->
 <h1> Register</h1>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 
   <form method="post" action="<?php echo $path . "controller/create-user.php"; ?>">
       <div>

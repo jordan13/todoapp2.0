@@ -2,7 +2,7 @@
      require_once(__DIR__ . "/../model/config.php");
      // this allows us to access other files form the directory
  ?>
-
+<link rel="stylesheet" type="text/css" href="css/main.css">
  <h1>Login</h1>
 
  <form method="post" action="<?php echo $path . "controller/login-user.php"?>">

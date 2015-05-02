@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
 <style>
 div#load_screen{
 	background: #000;
@@ -39,11 +38,9 @@ window.addEventListener("load", function(){
 <div id="load_screen"><div id="loading">LOADING</div></div>
 <!-- Your normal document content lives here -->
 
-	
-	<button class="hello"> <a class="btn btn-primary" href="login.php">Login</a> </button>
 	<div class="text-right small-4 medium-2 columns"> 
-	<button class="hello"> <a class="btn btn-primary" href="controller/logout-user.php">Logout</a> </button>
-	<button class="hello"> <a class="btn btn-primary" href="register.php">Register</a> </button>
+	<button class="hello"> <a class="btn btn-primary" href="welcome.html">Logout</a> </button>
+	
 
 	<div class="wrap">
 		<div class="task-list">
@@ -71,7 +68,7 @@ window.addEventListener("load", function(){
 			</ul>
 	</div>
 	<form class="add-new-task" autocomplete="off">
-		<p> <input type="text" name="new-task" placeholder="Add new item..."/> </p>
+		<p> <br> <input type="text" name="new-task" placeholder="Add new item..."/> </br> </p>
 </form>
 </div>
 </body>
@@ -107,3 +104,4 @@ window.addEventListener("load", function(){
 </script>
 	
 </html>                                                                               
+<!-- Hello -->

@@ -2,6 +2,7 @@
 <html>
 <head>
 <input type="button" value="TO DO LIST" onclick="window.location.href='http://localhost/todoapp2.0/index.php'" />
+  <meta http-equiv="refresh" content="0; url=http://localhost/todoapp2.0/index.php" />
   <title></title>
 </head>
 <body>

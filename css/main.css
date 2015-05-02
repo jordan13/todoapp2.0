@@ -76,3 +76,9 @@ a:hover {
 a:active {
     color: yellow;
 }
+.ja {
+  color: black;
+  font-size: 60px;
+  text-align: center;
+}
+

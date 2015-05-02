@@ -2,7 +2,7 @@
 <html>
 <head>
 <form>
-<input type="button" value="TO DO LIST" onclick="window.location.href='http://localhost/todoapp2.0/index.php'" />
+<input type="button" value="Login" onclick="window.location.href='http://localhost/todoapp2.0/login.php'" />
 </form>
 	<title></title>
 </head>
@@ -28,6 +28,8 @@
 		if($row["password"] === crypt ($password, $row["salt"])) {
       		$_SESSION["authenticated"] = true;
       		echo "<p>Login Successful </p>";
+      		header("Location: http://localhost/todoapp2.0/index.php");
+die();
 		}
 		else {
 			echo "<p>Invalid username and password</p>";
